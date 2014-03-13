@@ -1,2 +1,3 @@
 Dan Gereb
+	- Set up GitHub repository
 Michael Herbert
