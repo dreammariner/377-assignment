@@ -14,12 +14,20 @@ public class Index {
 	public int m = 0; //shared counter variable m
 	public Semaphore sem = new Semaphore(1);
 	public void readFile(String file){
+		int lineNumber=0;
+		String currentLine=null;
 		try  
 		{  
 		FileReader fr = new FileReader(file);  
 		BufferedReader myReader = new BufferedReader(fr);
 		}
 		catch(IOException e){System.out.println("IO Exception!");}
+		while (myReader.readLine() != null) {
+			lineNumber++;
+	        currentLine=myRead.readLine();
+	        /* next have to seperate this into words, bufferred reader does not have a feature like this.
+	         * Will probably have to implement a scanner, annoying but the easiest solution.
+	         */
 		}
 	}
 	
