@@ -1,6 +1,8 @@
 //Dan Gereb
 //Michael Herbert 
-
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.concurrent.Semaphore; //using Semaphore
 
 /*
@@ -11,6 +13,15 @@ import java.util.concurrent.Semaphore; //using Semaphore
 public class Index {
 	public int m = 0; //shared counter variable m
 	public Semaphore sem = new Semaphore(1);
+	public void readFile(String file){
+		try  
+		{  
+		FileReader fr = new FileReader(file);  
+		BufferedReader myReader = new BufferedReader(fr);
+		}
+		catch(IOException e){System.out.println("IO Exception!");}
+		}
+	}
 	
 	public static void main(String[] args){
 		
