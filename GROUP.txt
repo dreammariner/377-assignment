@@ -1,3 +1,6 @@
 Dan Gereb
 	- Set up GitHub repository
+	- Bounded Buffer setup
 Michael Herbert
+	- Semaphore setup
+	- Map/Reducer count
