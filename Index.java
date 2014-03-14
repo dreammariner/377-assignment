@@ -25,9 +25,11 @@ public class Index {
 		while (myReader.readLine() != null) {
 			lineNumber++;
 	        currentLine=myRead.readLine();
-	        /* next have to seperate this into words, bufferred reader does not have a feature like this.
-	         * Will probably have to implement a scanner, annoying but the easiest solution.
+	        String[] lineWords=currentLine.split(" ");
+	        /*
+	         * Line is now split up into seperate words.
 	         */
+
 		}
 	}
 	
