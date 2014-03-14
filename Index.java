@@ -25,6 +25,7 @@ public class Index {
 		while (myReader.readLine() != null) {
 			lineNumber++;
 	        currentLine=myRead.readLine();
+	        currentLine.replaceAll("[^A-Za-z0-9 ]").toLowerCase();
 	        String[] lineWords=currentLine.split(" ");
 	        /*
 	         * Line is now split up into seperate words.
