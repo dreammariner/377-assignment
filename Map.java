@@ -42,8 +42,12 @@ class Map implements Runnable{
 	        String[] lineWords = currentLine.split(" "); //Line is now split up into seperate words.
 	        
 	        //Iterate through lineWords, add lineWords[current index], lineNumber to queue
-	        for(int i = 0; i < lineWords.length(); i++)
-	        	map.add(lineWords[i], file + "@" + lineNumber);
+	        for(int i = 0; i < lineWords.length(); i++){
+	        	if(map.get(lineWords[i]) == null)
+	        		map.add(lineWords[i], file + "@" + lineNumber);
+	        	else
+	        		map.add(lineWords[i], lineNumber);
+	        }
 		}
 		synchronized(m){
 			m--;
