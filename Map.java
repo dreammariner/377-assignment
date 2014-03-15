@@ -19,6 +19,10 @@ class Map implements Runnable{
 	 */
 	public void run(){ 
 		
+		synchronized(m){
+			m++;
+		}
+		
 		int lineNumber = 0;
 		String currentLine = null;
 		
@@ -40,11 +44,7 @@ class Map implements Runnable{
 	         */
 	        //Iterate through lineWords, add lineWords[current index], lineNumber to queue
 		}
-	}
-		synchronized(m){
-			m++;
-		}
-		
+	}	
 		
 		synchronized(m){
 			m--;
