@@ -2,7 +2,9 @@ Dan Gereb
 	- Set up GitHub repository
 	- Bounded Buffer setup
 	- Synchronization research
+	- Formatting/Refactoring/Comments
 Michael Herbert
 	- Semaphore setup
-	- Map/Reducer count
+	- Map/Reducer Thread setup
 	- Synchronization research
+	- Formatting/Refactoring/Comments
