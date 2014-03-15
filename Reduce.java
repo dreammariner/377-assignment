@@ -1,4 +1,11 @@
 class Reduce implements Runnable{
+	
+	/*
+	 * Reduce Thread class
+	 * override run() to add reducer functionality
+	 * 
+	 * Constructor passed
+	 */
 	public Reduce(){
 		
 	}
