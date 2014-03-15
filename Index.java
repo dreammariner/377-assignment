@@ -21,7 +21,7 @@ public class Index {
 			Thread mapThread = new Thread(new Map(args[i])); //new thread, passing in file names
 		}
 		
-		for(int i = 0; i < numOfReducer; i++){
+		for(int i = 0; i < numOfReducer; i++){ //new thread for reduce
 			Thread reduceThread = new Thread(new Reduce());
 		}
 		

@@ -10,12 +10,14 @@ class Map implements Runnable{
 	private final String file;
 	private final int SIZE = 10; //size of bounded buffer
 	
-	public Map(String file){
+	public Map(String file){ 
 		this.file = file;
 		
 	}
 	/*	OVERRIDE METHOD
-	 * 
+	 *  Increments m, opens text file and reads line by line, dissecting words and adding them
+	 *  to the HashMap, with the word being the key, the value being the file@linenumber,linenumber,etc
+	 *  Decrementing m when finishing
 	 */
 	public void run(){ 
 		
@@ -39,25 +41,17 @@ class Map implements Runnable{
 			lineNumber++;
 	        currentLine = myReader.readLine();
 	        currentLine.replaceAll("[^A-Za-z0-9 ]").toLowerCase();
-<<<<<<< HEAD
-	        String[] lineWords = currentLine.split(" ");
-
-=======
 	        String[] lineWords = currentLine.split(" "); //Line is now split up into seperate words.
 	        
 	        //Iterate through lineWords, add lineWords[current index], lineNumber to queue
-<<<<<<< HEAD
+
 	        for(int i = 0; i < lineWords.length(); i++){
 	        	if(map.get(lineWords[i]) == null)
 	        		map.add(lineWords[i], file + "@" + lineNumber);
 	        	else
 	        		map.add(lineWords[i], lineNumber);
 	        }
-=======
-	        for(int i = 0; i < lineWords.length(); i++)
-	        	map.add(lineWords[i], file + "@" + lineNumber);
->>>>>>> 85f32fced890e25ab6e0bb211015bc9d003074c8
->>>>>>> FETCH_HEAD
+
 		}
 		synchronized(m){
 			m--;
