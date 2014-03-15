@@ -1,6 +1,8 @@
 Dan Gereb
 	- Set up GitHub repository
 	- Bounded Buffer setup
+	- Synchronization research
 Michael Herbert
 	- Semaphore setup
 	- Map/Reducer count
+	- Synchronization research
