@@ -39,10 +39,7 @@ class Map implements Runnable{
 	        currentLine = myReader.readLine();
 	        currentLine.replaceAll("[^A-Za-z0-9 ]").toLowerCase();
 	        String[] lineWords = currentLine.split(" ");
-	        /*
-	         * Line is now split up into seperate words.
-	         */
-	        //Iterate through lineWords, add lineWords[current index], lineNumber to queue
+
 		}
 	}	
 		
