@@ -25,6 +25,7 @@ class Map implements Runnable{
 		
 		int lineNumber = 0;
 		String currentLine = null;
+		HashMap map = new HashMap();
 		
 		try  
 		{  
@@ -38,16 +39,18 @@ class Map implements Runnable{
 			lineNumber++;
 	        currentLine = myReader.readLine();
 	        currentLine.replaceAll("[^A-Za-z0-9 ]").toLowerCase();
-	        String[] lineWords = currentLine.split(" ");
-	        /*
-	         * Line is now split up into seperate words.
-	         */
+	        String[] lineWords = currentLine.split(" "); //Line is now split up into seperate words.
+	        
 	        //Iterate through lineWords, add lineWords[current index], lineNumber to queue
+	        for(int i = 0; i < lineWords.length(); i++)
+	        	map.add(lineWords[i], file + "@" + lineNumber);
 		}
-	}	
-		
 		synchronized(m){
 			m--;
 		}
+		
+	}	
+		
+
 	}
 }
